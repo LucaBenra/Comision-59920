@@ -1,0 +1,162 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+
+        nav {
+            padding: 10px 0px;
+        }
+    }
+
+    .footer-row {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+        padding: 20px;
+    }
+
+    
+}
+
+@media (max-width: 425px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; // Evita desbordamiento horizontal
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center; 
+
+        .logo img {
+            height: 40px; 
+        }
+
+        .nav-link {
+            font-size: 14px; 
+            padding: 5px; 
+        }
+
+        .carrito {
+            height: 40px; 
+        }
+    }
+
+    .contenedor {
+        flex-direction: column; // Apila los productos en pantallas muy pequeñas
+        align-items: center; // Centra los productos
+    }
+
+    .contenedor .producto { // Acceso correcto a .producto dentro de .contenedor
+        width: calc(90% - 40px); // Asegura que ocupen más ancho
+        margin: 10px 0; // Espacio entre los productos
+    }
+
+    .imagen-inicio img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .boton {
+        font-size: 1.5em;
+        padding: 8px 16px; 
+    }
+
+    .footer-links {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .mas-productos {
+        display: flex;
+        flex-direction: column; // Cambiar a columna para apilar los productos
+        align-items: center; // Centrar los productos en el contenedor
+        margin: 20px 0; // Añadir margen arriba y abajo
+
+        .producto {
+            width: 90%; // Cambia el ancho a un valor más grande (90% o menos)
+            margin-bottom: 20px; // Añadir espacio entre los productos
+            padding: 15px; // Aumentar el padding interno del producto
+            background-color: $product-background; // Color de fondo
+            border-radius: 8px; // Redondear los bordes
+
+            // Ajustes específicos para la imagen y el texto
+            img {
+                width: 100%; // Asegurarse de que la imagen ocupe todo el ancho
+                height: auto; // Mantiene la proporción de la imagen
+                border-radius: 5px; // Redondear los bordes de la imagen
+            }
+
+            h3 {
+                font-size: 1.2em; // Aumentar el tamaño del título del producto
+                text-align: center; // Centrar el texto
+            }
+
+            .precio {
+                font-size: 1.2em; // Aumentar el tamaño del precio
+                text-align: center; // Centrar el texto
+            }
+        }
+    }
+
+    .carrito-contenedor {
+        width: 100%; // Ocupa todo el ancho
+        padding: 0; // Sin relleno
+        margin-bottom: 90px; // Sin márgenes
+        box-sizing: border-box; // Incluye padding y borde en el tamaño total
+    }
+
+    .carrito-productos {
+        display: flex;
+        flex-direction: column; // Alinea los productos en una columna
+        align-items: stretch; // Asegúrate de que ocupen el 100%
+        width: 100%; // Asegúrate de que ocupe todo el ancho
+        padding: 0; // Sin padding adicional
+    }
+
+    .carrito-productos {
+        display: flex;
+        flex-direction: column; // Apila los productos
+        align-items: stretch; // Asegúrate de que ocupen el 100%
+        width: 100%; // Asegúrate de que ocupe todo el ancho
+        padding: 0; // Sin padding
+    }
+    
+    .producto-carrito {
+        width: 100%; // Cada producto ocupa el 100%
+        margin: 30px 0; // Espacio entre productos
+        padding: 10px; // Espacio interno
+        box-sizing: border-box; // Incluye padding en el ancho total
+        text-align: center; // Centra el texto
+        background-color: #f8f8f8; // Ajusta el color de fondo
+        border-radius: 8px; // Bordes redondeados
+        flex-direction: column; // Cambiar a columna para apilar los elementos
+        align-items: center; // Centrar todos los elementos dentro
+
+        h3,
+        .precio-carrito,
+        input {
+            margin-bottom: 5px; // Espacio entre los elementos
+        }
+
+        button {
+            margin-top: 10px; // Espacio arriba del botón
+            margin-left: 0; // Eliminar margen izquierdo para centrar
+            width: 100%; // Hacer que el botón ocupe el ancho completo
+        }
+    }
+    
+    
+    .imagen-carrito {
+        width: 60px; // Tamaño de la imagen
+        height: 60px; 
+        object-fit: cover; // Mantiene la proporción
+    }
+
+    // Otros estilos que necesites para los botones y el total
+    .carrito-boton-finalizar {
+        width: 100%; // Hacer que el botón ocupe el ancho completo
+        margin-top: 20px; // Margen superior
+    }
+}

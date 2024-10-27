@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    background-color: $header-background;
+    align-items: center;
+    padding: 10px;
+
+    a {
+        font-weight: 600;
+        padding-right: 10px;
+        color: $text-color;
+
+        &:hover {
+            color: rgb(204, 204, 204);
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        img {
+            height: 50px;
+            margin-right: 10px;
+        }
+    }
+
+    .carrito {
+        width: 25px; 
+        height: auto !important; 
+    }
+}

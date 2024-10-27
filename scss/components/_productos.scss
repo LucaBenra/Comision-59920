@@ -1,0 +1,35 @@
+.producto {
+    background-color: $product-background; 
+    width: 35%; 
+    padding: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    .imagen {
+        width: 100%; 
+        height: 150px; 
+        object-fit: cover; 
+        margin-bottom: 10px;
+    }
+
+    .precio {
+        font-size: 1.4em;
+        margin: 10px 0;
+    }
+
+    .boton-compra {
+        background-color: $button-background; 
+        color: $text-color;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $button-hover-background; 
+        }
+    }
+}

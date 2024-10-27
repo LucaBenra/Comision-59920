@@ -1,0 +1,16 @@
+// Define las columnas y el espaciado para tu sistema de grids
+$grid-columns: 12;
+$grid-gutter: 15px;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: $grid-gutter;
+    padding: 20px;
+    text-align: center;
+}

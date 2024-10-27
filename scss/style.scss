@@ -1,0 +1,96 @@
+@import 'utilities/variables';  
+@import 'base/base';            
+@import 'base/typography';
+@import 'utilities/mixins';                
+@import 'components/header';     
+@import 'components/footer';
+@import 'components/productos';
+@import 'components/carrito';
+@import 'layout/grids'; 
+@import 'layout/responsive';
+@import 'components/imagen_inicio';
+@import 'utilities/maps';
+
+body {
+    background-color: map-get($color_sitio, color-fondo) !important;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+//titulos
+.promos {
+    @include centrar-texto;
+    color: white; 
+    margin: 50px;  //espacio entre titulo y productos
+}
+
+// Contenedor de productos
+.contenedor {
+    background-color: map-get($color_sitio, color-contenedor); // Color de fondo
+    @include flexbox(space-around); // Flexbox para alinear productos
+    @include padding(20px); // Espaciado interno
+}
+
+// Estilo para cada producto
+.producto {
+    background-color: map-get($color_sitio, color-producto); // Color de fondo del producto
+    width: 30%; // Ancho del producto 
+    @include padding(25px);
+    box-sizing: border-box; 
+    color: black; // Color del texto
+    @include centrar-texto;
+    margin: 30px; //margen
+    border-radius: 8px; 
+}
+
+// Imágenes de productos
+.imagen {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+// Precio
+.precio {
+    font-size: 1.4em; // Tamaño del texto del precio
+    margin: 10px 0; // Espaciado vertical
+}
+
+// Botón de compra
+.boton-compra {
+    @include boton-estilo(#141414e3, white);
+}
+
+// Efecto hover para el botón
+.boton-compra:hover {
+    background-color: #313131; // Cambiar color al pasar el ratón
+}
+
+.mas-productos {
+    @include flexbox(center, wrap);
+    background-color: map-get($color_sitio, color-fondo); 
+    @include padding(30px);
+
+    .producto {
+        flex: 0 1 calc(33.333% - 40px); 
+        margin: 20px; // Espacio entre los productos
+        margin-bottom: 35px;
+        background-color: white; // Color de fondo blanco para cada producto
+        @include padding(10px);
+        border: 1px solid map-get($color_sitio, color-fondo); // Borde para separar los productos
+        border-radius: 5px; // Bordes redondeados
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra sutil
+
+        .imagen {
+            max-width: 100%; // Asegura que la imagen no exceda el ancho del contenedor
+            height: auto; // Mantiene la proporción de la imagen
+        }
+    }
+}

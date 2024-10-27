@@ -1,0 +1,35 @@
+/* Establece márgenes y rellenos a 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elimina estilos predeterminados de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Elimina el subrayado de los enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Restablece estilos de encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Restablece estilos de tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Establece un fondo y color de texto predeterminados */
+body {
+    background: #fff; /* o el color que prefieras */
+    color: #333; /* o el color que prefieras */
+}

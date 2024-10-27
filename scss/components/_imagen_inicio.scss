@@ -1,0 +1,24 @@
+/* Contenedor principal */
+.carrusel {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    overflow: hidden;
+    position: relative;
+}
+
+//Contenedor de las imágenes 
+.carrusel .imagenes {
+    display: flex;
+    width: 200%; //100% para cada imagen
+    animation: deslizar 15s infinite; // 15 segundos en bucle para una transición lenta 
+}
+
+// Estilos para cada imagen
+.carrusel img {
+    width: 50%; //Cada imagen ocupa la mitad del contenedor (50% de 200%)
+}
+
+// Animación del carrusel 
+@keyframes deslizar {
+    0%, 100% { transform: translateX(0); }         /* Primera imagen */
+    50% { transform: translateX(-50%); }           /* Segunda imagen */
+}

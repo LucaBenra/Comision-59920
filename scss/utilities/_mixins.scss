@@ -1,0 +1,27 @@
+@mixin boton-estilo($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($bg-color, 10%);
+    }
+}
+
+@mixin centrar-texto {
+    text-align: center;
+}
+
+@mixin padding($value) {
+    padding: $value;
+}
+
+@mixin flexbox($justify: center, $wrap: wrap) {
+    display: flex;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
