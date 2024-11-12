@@ -22,7 +22,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        overflow-x: hidden; // Evita desbordamiento horizontal
+        overflow-x: hidden; 
     }
 
     header {
@@ -44,13 +44,13 @@
     }
 
     .contenedor {
-        flex-direction: column; // Apila los productos en pantallas muy pequeñas
-        align-items: center; // Centra los productos
+        flex-direction: column; 
+        align-items: center;
     }
 
-    .contenedor .producto { // Acceso correcto a .producto dentro de .contenedor
-        width: calc(90% - 40px); // Asegura que ocupen más ancho
-        margin: 10px 0; // Espacio entre los productos
+    .contenedor .producto { 
+        width: calc(90% - 40px); 
+        margin: 10px 0; 
     }
 
     .imagen-inicio img {
@@ -70,93 +70,107 @@
 
     .mas-productos {
         display: flex;
-        flex-direction: column; // Cambiar a columna para apilar los productos
-        align-items: center; // Centrar los productos en el contenedor
-        margin: 20px 0; // Añadir margen arriba y abajo
+        flex-direction: column; 
+        align-items: center; 
+        margin: 20px 0; 
 
         .producto {
-            width: 90%; // Cambia el ancho a un valor más grande (90% o menos)
-            margin-bottom: 20px; // Añadir espacio entre los productos
-            padding: 15px; // Aumentar el padding interno del producto
-            background-color: $product-background; // Color de fondo
-            border-radius: 8px; // Redondear los bordes
+            width: 90%; 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            background-color: $product-background; 
+            border-radius: 8px; 
 
-            // Ajustes específicos para la imagen y el texto
+            
             img {
-                width: 100%; // Asegurarse de que la imagen ocupe todo el ancho
-                height: auto; // Mantiene la proporción de la imagen
-                border-radius: 5px; // Redondear los bordes de la imagen
+                width: 100%; 
+                height: auto; 
+                border-radius: 5px;
             }
 
             h3 {
-                font-size: 1.2em; // Aumentar el tamaño del título del producto
-                text-align: center; // Centrar el texto
+                font-size: 1.2em; 
+                text-align: center; 
             }
 
             .precio {
-                font-size: 1.2em; // Aumentar el tamaño del precio
-                text-align: center; // Centrar el texto
+                font-size: 1.2em; 
+                text-align: center;
             }
         }
     }
 
     .carrito-contenedor {
-        width: 100%; // Ocupa todo el ancho
-        padding: 0; // Sin relleno
-        margin-bottom: 90px; // Sin márgenes
-        box-sizing: border-box; // Incluye padding y borde en el tamaño total
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 90px; 
+        box-sizing: border-box; 
     }
 
     .carrito-productos {
         display: flex;
-        flex-direction: column; // Alinea los productos en una columna
-        align-items: stretch; // Asegúrate de que ocupen el 100%
-        width: 100%; // Asegúrate de que ocupe todo el ancho
-        padding: 0; // Sin padding adicional
+        flex-direction: column; 
+        align-items: stretch; 
+        width: 100%; 
+        padding: 0; 
     }
 
     .carrito-productos {
         display: flex;
-        flex-direction: column; // Apila los productos
-        align-items: stretch; // Asegúrate de que ocupen el 100%
-        width: 100%; // Asegúrate de que ocupe todo el ancho
-        padding: 0; // Sin padding
+        flex-direction: column; 
+        align-items: stretch; 
+        width: 100%; 
+        padding: 0; 
     }
     
     .producto-carrito {
-        width: 100%; // Cada producto ocupa el 100%
-        margin: 30px 0; // Espacio entre productos
-        padding: 10px; // Espacio interno
-        box-sizing: border-box; // Incluye padding en el ancho total
-        text-align: center; // Centra el texto
-        background-color: #f8f8f8; // Ajusta el color de fondo
-        border-radius: 8px; // Bordes redondeados
-        flex-direction: column; // Cambiar a columna para apilar los elementos
-        align-items: center; // Centrar todos los elementos dentro
+        width: 100%; 
+        margin: 30px 0; 
+        padding: 10px; 
+        box-sizing: border-box; 
+        text-align: center;
+        background-color: #f8f8f8; 
+        border-radius: 8px; 
+        flex-direction: column; 
+        align-items: center; 
 
         h3,
         .precio-carrito,
         input {
-            margin-bottom: 5px; // Espacio entre los elementos
+            margin-bottom: 5px; 
         }
 
         button {
-            margin-top: 10px; // Espacio arriba del botón
-            margin-left: 0; // Eliminar margen izquierdo para centrar
-            width: 100%; // Hacer que el botón ocupe el ancho completo
+            margin-top: 10px; 
+            margin-left: 0; 
+            width: 100%; 
         }
     }
     
     
     .imagen-carrito {
-        width: 60px; // Tamaño de la imagen
+        width: 60px; 
         height: 60px; 
-        object-fit: cover; // Mantiene la proporción
+        object-fit: cover; 
     }
 
-    // Otros estilos que necesites para los botones y el total
+
     .carrito-boton-finalizar {
-        width: 100%; // Hacer que el botón ocupe el ancho completo
-        margin-top: 20px; // Margen superior
+        width: 100%; 
+        margin-top: 20px; 
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        nav {
+            display: flex;
+            flex-direction: column; // Coloca los enlaces uno debajo del otro
+            align-items: center; // Alinea los enlaces al inicio
+
+            a {
+                margin-bottom: 10px; // Añade espacio entre los enlaces
+            }
+        }
     }
 }

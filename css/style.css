@@ -227,6 +227,14 @@ header {
     width: 100%;
     margin-top: 20px; } }
 
+@media (max-width: 320px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    header nav a {
+      margin-bottom: 10px; } }
+
 /* Contenedor principal */
 .carrusel {
   width: 100%;
